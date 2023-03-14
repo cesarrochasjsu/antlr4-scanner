@@ -14,7 +14,7 @@ scanner: $(OBJ_FILES)
 	g++ -c -o $@ $< -L$(ANTLR4_CPP_LIB_DIR) -I$(ANTLR4_CPP_RUNTIME_DIR) $(ANTLR4_CPP_LIB)
 
 generate:
-	antlr4 -Dlanguage=Cpp $(GRAMMAR)
+	antlr4 -Dlanguage=Cpp  $(GRAMMAR)
 
 clean:
 	rm -f *.o scanner *~
