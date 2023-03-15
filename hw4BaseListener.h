@@ -8,8 +8,6 @@
 #include "hw4Listener.h"
 
 
-namespace parser {
-
 /**
  * This class provides an empty implementation of hw4Listener,
  * which can be extended to create a listener which only needs to handle a subset
@@ -56,4 +54,3 @@ public:
 
 };
 
-}  // namespace parser

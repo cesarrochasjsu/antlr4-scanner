@@ -58,7 +58,7 @@ std::unordered_map<size_t, std::string> to_string{
 int main(int argc, const char *argv[]) {
   std::ifstream stream{"test-in.txt"};
   antlr4::ANTLRInputStream input(stream);
-  parser::hw4Lexer lexer(&input);
+  hw4Lexer lexer(&input);
   antlr4::CommonTokenStream tokens(&lexer);
   tokens.fill();
   for (antlr4::Token *token : tokens.getTokens()) {

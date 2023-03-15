@@ -8,8 +8,6 @@
 #include "hw4Parser.h"
 
 
-namespace parser {
-
 /**
  * This interface defines an abstract listener for a parse tree produced by hw4Parser.
  */
@@ -49,4 +47,3 @@ public:
 
 };
 
-}  // namespace parser

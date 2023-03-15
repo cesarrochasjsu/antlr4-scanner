@@ -11,6 +11,7 @@ Table of Contents
 ..... 1. Antlr CPP Runtime binary
 .. 3. Runtime directories and Linking
 3. Installation
+.. 1. Trouble shooting
 4. Usage
 .. 1. Input
 
@@ -25,12 +26,20 @@ Table of Contents
 2 Prerequisites
 ═══════════════
 
+  This project was developed on a rolling-release linux
+  distro. Therefore, the antlr4 and cpp versions are far ahead of what
+  they usually are
+
   Before installing the scanner, you will need to have the following
   prerequisites installed:
+
+  If you have a
 
 
 2.1 ANTLR4:
 ───────────
+
+  ANTLR Parser Generator Version 4.11.1
 
   ANTLR4 is a parser generator that is used to generate the scanner code
   from a grammar file. To install ANTLR4, follow the instructions
@@ -42,8 +51,10 @@ Table of Contents
 2.2 A C++ compiler:
 ───────────────────
 
+  g++ (GCC) 12.2.1 20230201
+
   You will need a C++ compiler to compile the generated scanner code. We
-  recommend using a compiler that supports the C++11 standard.  [ANTLR4
+  recommend using a compiler that supports the C++20 standard.  [ANTLR4
   CPP installation and configuration for Linux and MacOS]
 
 
@@ -54,6 +65,10 @@ Table of Contents
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   [Antlr4 for linux]
+
+
+  ANTLR4_CPP_RUNTIME_DIR is in /usr/local/include/antlr4-runtime
+  ANTLR4_CPP_LIB_DIR is in /usr/local/lib
 
 
 [Antlr4 for linux]
@@ -96,6 +111,24 @@ Table of Contents
   ┌────
   │ ./scanner
   └────
+
+
+3.1 Trouble shooting
+────────────────────
+
+  If you get this error
+
+  ┌────
+  │ ./scanner: error while loading shared libraries: libantlr4-runtime.so.4.11.1: cannot open shared object file: No such file or directory
+  └────
+  One quick work around in a linux environment is to use
+
+  ┌────
+  │ export LD_LIBRARY_PATH=/usr/local/bin
+  └────
+
+  This will make antlr4 unusable so make sure to exit the session after
+  you are done using this project
 
 
 4 Usage

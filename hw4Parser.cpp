@@ -8,7 +8,6 @@
 
 
 using namespace antlrcpp;
-using namespace parser;
 
 using namespace antlr4;
 

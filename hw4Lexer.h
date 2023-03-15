@@ -7,7 +7,6 @@
 #include "antlr4-runtime.h"
 
 
-namespace parser {
 
 
 class  hw4Lexer : public antlr4::Lexer {
@@ -62,4 +61,3 @@ private:
 
 };
 
-}  // namespace parser
