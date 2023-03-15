@@ -33,7 +33,9 @@ Table of Contents
   Before installing the scanner, you will need to have the following
   prerequisites installed:
 
-  If you have a
+  If you have a docker, you can run this inside an arch linux container
+  and it will have the latest versions of antlr4 and g++ to build this
+  project when you jump into the process.
 
 
 2.1 ANTLR4:
@@ -47,6 +49,9 @@ Table of Contents
 
   <https://www.antlr.org/download.html>
 
+  ANTLR4 4.11.1 generates higher than c++11 standard so to compile it
+  make sure you have this one.
+
 
 2.2 A C++ compiler:
 ───────────────────
@@ -54,25 +59,17 @@ Table of Contents
   g++ (GCC) 12.2.1 20230201
 
   You will need a C++ compiler to compile the generated scanner code. We
-  recommend using a compiler that supports the C++20 standard.  [ANTLR4
-  CPP installation and configuration for Linux and MacOS]
+  recommend using a compiler that supports the C++20 standard.
+  <https:https://www.cs.sjsu.edu/~mak/tutorials/InstallANTLR4Cpp.pdf>
 
-
-[ANTLR4 CPP installation and configuration for Linux and MacOS]
-<https:https://www.cs.sjsu.edu/~mak/tutorials/InstallANTLR4Cpp.pdf>
 
 2.2.1 Antlr CPP Runtime binary
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-  [Antlr4 for linux]
-
+  <https:https://www.antlr.org/download/antlr4-cpp-runtime-4.12.0-source.zip>
 
   ANTLR4_CPP_RUNTIME_DIR is in /usr/local/include/antlr4-runtime
   ANTLR4_CPP_LIB_DIR is in /usr/local/lib
-
-
-[Antlr4 for linux]
-<https:https://www.antlr.org/download/antlr4-cpp-runtime-4.12.0-source.zip>
 
 
 2.3 Runtime directories and Linking
