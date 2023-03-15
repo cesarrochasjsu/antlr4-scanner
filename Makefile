@@ -15,10 +15,5 @@ scanner: $(OBJ_FILES)
 %.o: %.cpp
 	$(CPP) $(CPPFLAGS) -c -o $@ $<  -I$(ANTLR4_CPP_RUNTIME_DIR)
 
-
-generate:
-	unexport LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/bin
-	antlr4 -Dlanguage=Cpp  $(GRAMMAR)
-
 clean:
 	rm -f *.o scanner *~
